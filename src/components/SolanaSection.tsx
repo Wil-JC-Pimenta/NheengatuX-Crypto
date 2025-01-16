@@ -25,7 +25,7 @@ const SolanaSection = () => {
     {
       title: "Solana Development",
       description: "Resources and tools for developing on Solana",
-      link: "https://solana.com/developers",
+      link: "https://solana.com/",
       icon: <Code className="w-6 h-6 text-black" />
     },
     {

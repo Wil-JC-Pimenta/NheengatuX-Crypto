@@ -81,7 +81,7 @@ const NheengatuSection = () => {
       {/* Botão para compra de Token */}
       <div className="text-center my-8">
         <a
-          href="https://www.example.com/buy-token" // Link para a compra do token
+          href="https://ngtdapp-front-end.vercel.app/" // Link para a compra do token
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
