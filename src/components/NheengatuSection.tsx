@@ -4,7 +4,7 @@ const NheengatuSection = () => {
   const nheengatuFeatures = [
     {
       title: "Token Symbol",
-      description: "The symbol for Nheengatu Token is NHEE.",
+      description: "The symbol for NheengatuX Token is NGTX.",
       icon: <Star className="w-6 h-6 text-yellow-500" />
     },
     {
@@ -29,10 +29,10 @@ const NheengatuSection = () => {
     <section className="my-12 animate-fade-in text-black px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 text-blue-500">
-          Nheengatu Token Overview
+          NheengatuX Token Overview
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-green-500">
-          Learn about the features and advantages of the Nheengatu Token, a
+          Learn about the features and advantages of the NheengatuX Token, a
           unique digital asset designed with scarcity and cultural importance.
         </p>
       </div>
@@ -68,10 +68,10 @@ const NheengatuSection = () => {
       {/* Enriquecendo o conteúdo */}
       <div className="my-8 text-center">
         <h3 className="text-2xl font-semibold text-blue-500 mb-4">
-          Why Choose Nheengatu Token?
+          Why Choose NheengatuX Token?
         </h3>
         <p className="text-muted-foreground max-w-3xl mx-auto text-gray-600">
-          Nheengatu Token is not just a digital asset; it represents a strong
+          NheengatuX Token is not just a digital asset; it represents a strong
           cultural heritage, promoting scarcity and long-term value. The token's
           structure is designed for community-driven growth, making it a perfect
           addition to any portfolio.
