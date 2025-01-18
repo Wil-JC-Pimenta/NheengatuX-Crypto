@@ -13,23 +13,23 @@ const NheengatuSection = () => {
     {
       title: "Token Symbol",
       description: "The symbol for NheengatuX Token is NGTX.",
-      icon: <Star className="w-6 h-6 text-yellow-500" />
+      icon: <Star className="w-5 h-5 text-yellow-500" />
     },
     {
       title: "Max Supply",
       description: "The maximum supply is fixed at 50 million tokens.",
-      icon: <Shield className="w-6 h-6 text-red-500" />
+      icon: <Shield className="w-5 h-5 text-red-500" />
     },
     {
       title: "Scarcity and Value",
       description:
         "Fixed supply ensures scarcity and potential value appreciation.",
-      icon: <Globe className="w-6 h-6 text-blue-500" />
+      icon: <Globe className="w-5 h-5 text-blue-500" />
     },
     {
       title: "Cultural Significance",
       description: "Inspired by the rich cultural language of Nheengatu.",
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />
+      icon: <CheckCircle className="w-5 h-5 text-green-500" />
     }
   ];
 
@@ -53,18 +53,18 @@ const NheengatuSection = () => {
         <img
           src="/nheengatu.jpg"
           alt="Nheengatu Token"
-          className="w-[450px] h-[450px] sm:w-[150px] sm:h-[150px] mx-auto rounded-lg mb-8"
+          className="w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] mx-auto rounded-full mb-8"
         />
 
         <div className="space-y-6">
           {nheengatuFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-center justify-center gap-4"
+              className="flex items-center justify-center gap-4 text-sm sm:text-base"
             >
               <div>{feature.icon}</div>
               <div>
-                <h3 className="text-xl font-semibold text-blue-500">
+                <h3 className="text-lg font-semibold text-blue-500">
                   {feature.title}
                 </h3>
                 <p className="text-[#fff]">{feature.description}</p>
@@ -93,7 +93,7 @@ const NheengatuSection = () => {
           rel="noopener noreferrer"
           className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
         >
-          NheengatuX Token Data
+          Token Data
         </a>
       </div>
 
@@ -104,7 +104,7 @@ const NheengatuSection = () => {
         </h3>
         <div
           dangerouslySetInnerHTML={{
-            __html: `
+            __html: ` 
               <stripe-buy-button
                 buy-button-id="buy_btn_1QN4ANBN0vNsHNbfYQKUX4a1"
                 publishable-key="pk_live_51QLtFpBN0vNsHNbfAPGWA9I6Zve4qxfnZUWLVNQzzKxBjIuoG70vhVnTAm2PqiuaaHzeAc0SADDmYounXurcg7bo00x2AY0NNH"
