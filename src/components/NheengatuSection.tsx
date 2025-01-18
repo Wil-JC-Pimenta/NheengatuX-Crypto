@@ -1,6 +1,14 @@
 import { Star, Shield, Globe, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 
 const NheengatuSection = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.stripe.com/v3/buy-button.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   const nheengatuFeatures = [
     {
       title: "Token Symbol",
@@ -42,14 +50,12 @@ const NheengatuSection = () => {
       </div>
 
       <div className="text-center mb-8">
-        {/* Imagem com responsividade */}
         <img
-          src="/nheengatu.jpg" // Caminho da imagem
+          src="/nheengatu.jpg"
           alt="Nheengatu Token"
-          className="w-[450px] h-[450px] sm:w-[150px] sm:h-[150px] mx-auto rounded-lg mb-8" // Responsividade da imagem
+          className="w-[450px] h-[450px] sm:w-[150px] sm:h-[150px] mx-auto rounded-lg mb-8"
         />
 
-        {/* Descrições do token */}
         <div className="space-y-6">
           {nheengatuFeatures.map((feature) => (
             <div
@@ -61,15 +67,13 @@ const NheengatuSection = () => {
                 <h3 className="text-xl font-semibold text-blue-500">
                   {feature.title}
                 </h3>
-                <p className="text-[#fff]">{feature.description}</p>{" "}
-                {/* Alterado para #fff */}
+                <p className="text-[#fff]">{feature.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Enriquecendo o conteúdo */}
       <div className="my-8 text-center">
         <h3 className="text-2xl font-semibold text-blue-500 mb-4">
           Why Choose NheengatuX Crypto?
@@ -82,19 +86,35 @@ const NheengatuSection = () => {
         </p>
       </div>
 
-      {/* Botão para compra de Token */}
       <div className="text-center my-8">
         <a
-          href="https://ngtdapp-front-end.vercel.app/" // Link para a compra do token
+          href="https://ngtdapp-front-end.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
         >
-          Buy NheengatuX Crypto
+          NheengatuX Token Data
         </a>
       </div>
 
-      {/* Endereço do Mint */}
+      {/* Stripe Buy Button Integration */}
+      <div className="text-center my-8">
+        <h3 className="text-2xl font-semibold text-blue-500 mb-4">
+          Buy NheengatuX Token
+        </h3>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+              <stripe-buy-button
+                buy-button-id="buy_btn_1QN4ANBN0vNsHNbfYQKUX4a1"
+                publishable-key="pk_live_51QLtFpBN0vNsHNbfAPGWA9I6Zve4qxfnZUWLVNQzzKxBjIuoG70vhVnTAm2PqiuaaHzeAc0SADDmYounXurcg7bo00x2AY0NNH"
+              >
+              </stripe-buy-button>
+            `
+          }}
+        />
+      </div>
+
       <div className="my-8 text-center">
         <h3 className="text-2xl font-semibold text-blue-500 mb-4">
           Mint Address
@@ -103,21 +123,16 @@ const NheengatuSection = () => {
           To mint your Nheengatu Tokens, use the following address:
         </p>
         <p className="font-mono text-lg text-[#fff]">
-          {" "}
-          {/* Alterado para #fff */}
           mnthw9H7rjWiiamrcyVwErvfTPLKBN6WPQXL2DqrJQE
         </p>
       </div>
 
-      {/* Card da Solana Explorer */}
       <div className="my-8 text-center">
         <h3 className="text-2xl font-semibold text-blue-500 mb-4">
           Mint Information - Solana Explorer
         </h3>
         <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
           <h4 className="text-lg text-[#fff] font-semibold mb-2">
-            {" "}
-            {/* Alterado para #fff */}
             Check Mint Details on Solana Explorer
           </h4>
           <p className="text-gray-400 mb-4">
