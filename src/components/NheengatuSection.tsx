@@ -28,12 +28,16 @@ const NheengatuSection = () => {
   return (
     <section className="my-12 animate-fade-in text-black px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-4 text-blue-500">
-          NheengatuX Token Overview
-        </h2>
+        <h2 className="text-3xl font-bold mb-4 text-blue-500">NheengatuX</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-green-500">
-          Learn about the features and advantages of the NheengatuX Token, a
-          unique digital asset designed with scarcity and cultural importance.
+          NheengatuX is a tribute to the rich cultural heritage of the Amazonian
+          indigenous peoples and the Nheengatu language, an ancient language
+          that connects history and nature. The 'X' in NheengatuX represents the
+          intersection of tradition with cutting-edge technology, symbolizing
+          the convergence of indigenous wisdom with the modern worlds of
+          Exchange, Crypto, Web3, DeFi, and Artificial Intelligence. This token
+          paves the way for an inclusive future where innovation meets heritage,
+          blending the power of AI with the resilience of cultural legacy.
         </p>
       </div>
 
