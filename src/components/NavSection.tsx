@@ -17,7 +17,7 @@ const NavSection = () => {
         const data = await response.json();
         setCryptoData(data.data.slice(0, 5));
       } catch (error) {
-        console.error("Erro ao buscar dados das criptomoedas:", error);
+        console.error("Error fetching cryptocurrency data:", error);
       }
     };
 
@@ -37,7 +37,7 @@ const NavSection = () => {
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Pesquise criptomoedas"
+          placeholder="Search Crypto"
           style={styles.searchInput}
         />
 
@@ -51,9 +51,7 @@ const NavSection = () => {
                 </span>
               ))
             ) : (
-              <span style={styles.cryptoItem}>
-                Nenhuma criptomoeda encontrada.
-              </span>
+              <span style={styles.cryptoItem}>No cryptocurrency found.</span>
             )}
           </div>
         </div>
@@ -68,7 +66,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    position: "fixed" as "fixed", // Corrigido aqui
+    position: "fixed" as "fixed",
     top: 0,
     width: "100%",
     zIndex: 1000
@@ -97,7 +95,7 @@ const styles = {
     alignItems: "center",
     whiteSpace: "nowrap",
     overflow: "hidden",
-    maxWidth: "calc(100% - 400px)" // Ajuste o limite de largura
+    maxWidth: "calc(100% - 400px)"
   },
   marquee: {
     display: "inline-block",
