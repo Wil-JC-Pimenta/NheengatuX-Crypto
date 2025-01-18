@@ -2,22 +2,26 @@ import { ArrowUpIcon, ArrowDownIcon } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchCryptoData = async () => {
-  const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,tether,binancecoin,solana,ripple,cardano,usd-coin,dogecoin,polkadot&order=market_cap_desc&per_page=10&page=1&sparkline=false');
+  const response = await fetch(
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,tether,binancecoin,solana,ripple,cardano,usd-coin,dogecoin,polkadot&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+  );
   if (!response.ok) {
-    throw new Error('Network response was not ok');
+    throw new Error("Network response was not ok");
   }
   return response.json();
 };
 
 const CryptoList = () => {
   const { data: cryptos, isLoading } = useQuery({
-    queryKey: ['cryptos'],
+    queryKey: ["cryptos"],
     queryFn: fetchCryptoData,
-    refetchInterval: 30000, // Refetch every 30 seconds
+    refetchInterval: 30000 // Refetch every 30 seconds
   });
 
   if (isLoading) {
-    return <div className="glass-card rounded-lg p-6 animate-pulse">Loading...</div>;
+    return (
+      <div className="glass-card rounded-lg p-6 animate-pulse">Loading...</div>
+    );
   }
 
   return (
@@ -40,18 +44,28 @@ const CryptoList = () => {
               <tr key={crypto.symbol} className="border-t border-secondary">
                 <td className="py-4">
                   <div className="flex items-center gap-2">
-                    <img src={crypto.image} alt={crypto.name} className="w-8 h-8 rounded-full" />
+                    <img
+                      src={crypto.image}
+                      alt={crypto.name}
+                      className="w-8 h-8 rounded-full"
+                    />
                     <div>
                       <p className="font-medium">{crypto.name}</p>
-                      <p className="text-sm text-muted-foreground">{crypto.symbol.toUpperCase()}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {crypto.symbol.toUpperCase()}
+                      </p>
                     </div>
                   </div>
                 </td>
-                <td className="py-4">${crypto.current_price.toLocaleString()}</td>
+                <td className="py-4">
+                  ${crypto.current_price.toLocaleString()}
+                </td>
                 <td className="py-4">
                   <span
                     className={`flex items-center gap-1 ${
-                      crypto.price_change_percentage_24h >= 0 ? "text-success" : "text-warning"
+                      crypto.price_change_percentage_24h >= 0
+                        ? "text-success"
+                        : "text-warning"
                     }`}
                   >
                     {crypto.price_change_percentage_24h >= 0 ? (
@@ -62,10 +76,15 @@ const CryptoList = () => {
                     {Math.abs(crypto.price_change_percentage_24h).toFixed(2)}%
                   </span>
                 </td>
-                <td className="py-4">${(crypto.market_cap / 1e9).toFixed(2)}B</td>
-                <td className="py-4">${(crypto.total_volume / 1e9).toFixed(2)}B</td>
                 <td className="py-4">
-                  {crypto.circulating_supply.toLocaleString()} {crypto.symbol.toUpperCase()}
+                  ${(crypto.market_cap / 1e9).toFixed(2)}B
+                </td>
+                <td className="py-4">
+                  ${(crypto.total_volume / 1e9).toFixed(2)}B
+                </td>
+                <td className="py-4">
+                  {crypto.circulating_supply.toLocaleString()}{" "}
+                  {crypto.symbol.toUpperCase()}
                 </td>
               </tr>
             ))}

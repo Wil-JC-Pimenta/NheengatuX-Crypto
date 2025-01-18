@@ -15,7 +15,15 @@ const NavSection = () => {
       try {
         const response = await fetch("https://api.coincap.io/v2/assets");
         const data = await response.json();
-        setCryptoData(data.data.slice(0, 5));
+        const otherCryptos = data.data.slice(0, 5);
+
+        // Adiciona a criptomoeda "NGTX" com preço fixo de 0.5 USD
+        const updatedCryptoData = [
+          { symbol: "NGTX", price_usd: "0.5" },
+          ...otherCryptos
+        ];
+
+        setCryptoData(updatedCryptoData);
       } catch (error) {
         console.error("Error fetching cryptocurrency data:", error);
       }
@@ -59,6 +67,7 @@ const NavSection = () => {
     </nav>
   );
 };
+
 const styles = {
   navbar: {
     backgroundColor: "#121212",

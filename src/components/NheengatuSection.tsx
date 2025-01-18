@@ -1,7 +1,9 @@
 import { Star, Shield, Globe, CheckCircle } from "lucide-react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const NheengatuSection = () => {
+  const [copySuccess, setCopySuccess] = useState(false); // Para controle do estado de cópia
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://js.stripe.com/v3/buy-button.js";
@@ -33,6 +35,19 @@ const NheengatuSection = () => {
     }
   ];
 
+  const handleCopyClick = () => {
+    const mintAddress = "mnthw9H7rjWiiamrcyVwErvfTPLKBN6WPQXL2DqrJQE";
+    navigator.clipboard
+      .writeText(mintAddress)
+      .then(() => {
+        setCopySuccess(true);
+        setTimeout(() => setCopySuccess(false), 2000); // Feedback por 2 segundos
+      })
+      .catch(() => {
+        setCopySuccess(false);
+      });
+  };
+
   return (
     <section className="my-12 animate-fade-in text-black px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-8">
@@ -50,17 +65,19 @@ const NheengatuSection = () => {
       </div>
 
       <div className="text-center mb-8">
-        <img
-          src="/nheengatu.jpg"
-          alt="Nheengatu Token"
-          className="w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] mx-auto rounded-full mb-8"
-        />
+        <div className="w-[200px] h-[200px] sm:w-[150px] sm:h-[150px] mx-auto mb-8 overflow-hidden rounded-full">
+          <img
+            src="/nheengatu.jpg"
+            alt="Nheengatu Token"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="space-y-6">
           {nheengatuFeatures.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-center justify-center gap-4 text-sm sm:text-base"
+              className="flex flex-col items-center justify-center gap-4 py-4 text-sm sm:text-base"
             >
               <div>{feature.icon}</div>
               <div>
@@ -125,6 +142,12 @@ const NheengatuSection = () => {
         <p className="font-mono text-lg text-[#fff]">
           mnthw9H7rjWiiamrcyVwErvfTPLKBN6WPQXL2DqrJQE
         </p>
+        <button
+          className="mt-4 bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
+          onClick={handleCopyClick}
+        >
+          {copySuccess ? "Address Copied!" : "Copy Mint Address"}
+        </button>
       </div>
 
       <div className="my-8 text-center">
@@ -148,6 +171,25 @@ const NheengatuSection = () => {
             Solana Explorer - Mint Address
           </a>
         </div>
+      </div>
+
+      <div className="my-8 text-center">
+        <h3 className="text-2xl font-semibold text-blue-500 mb-4">
+          Tokenomics
+        </h3>
+        <p className="text-muted-foreground max-w-3xl mx-auto text-gray-600">
+          Learn more about the tokenomics of NheengatuX and its structure by
+          visiting the official page.
+        </p>
+        <br></br>
+        <a
+          href="https://nheengatutoken.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
+        >
+          Tokenomics
+        </a>
       </div>
     </section>
   );
