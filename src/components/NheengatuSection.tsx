@@ -72,10 +72,10 @@ const NheengatuSection = () => {
       {/* Enriquecendo o conteúdo */}
       <div className="my-8 text-center">
         <h3 className="text-2xl font-semibold text-blue-500 mb-4">
-          Why Choose NheengatuX Token?
+          Why Choose NheengatuX Crypto?
         </h3>
         <p className="text-muted-foreground max-w-3xl mx-auto text-gray-600">
-          NheengatuX Token is not just a digital asset; it represents a strong
+          NheengatuX Crypto is not just a digital asset; it represents a strong
           cultural heritage, promoting scarcity and long-term value. The token's
           structure is designed for community-driven growth, making it a perfect
           addition to any portfolio.
@@ -90,7 +90,7 @@ const NheengatuSection = () => {
           rel="noopener noreferrer"
           className="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
         >
-          Buy Nheengatu Token (CAT)
+          Buy NheengatuX Crypto
         </a>
       </div>
 
