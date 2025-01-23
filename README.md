@@ -1,20 +1,24 @@
-# Crypto Dashboard - Web System
+# Crypto Dashboard
 
-## Descrição
+## NheengatuX Crypto 
+
+### Descrição
 
 O **Crypto Dashboard** é um sistema web interativo que permite aos usuários explorar e acessar recursos importantes de várias blockchains, como Solana, Bitcoin, Binance Smart Chain e outros. O painel exibe informações detalhadas, incluindo exploradores de blockchain, recursos de desenvolvimento, plataformas DeFi, marketplaces de NFT e muito mais.
 
 Este sistema foi desenvolvido utilizando **Vite** como bundler, **TypeScript** para tipagem estática e **Lovable** para componentes de interface, garantindo uma experiência rápida, segura e eficiente tanto para desenvolvedores quanto para usuários.
 
-Além disso, o sistema agora suporta o token **NheengatuX (NGTX)**, permitindo que os usuários explorem e interajam com informações sobre este token.
+Além disso, o sistema divulga informações do token **NheengatuX (NGTX)**,desenvolvido na rede mainnet da Solana, através do do SPL Token Mint, permitindo que os usuários explorem e interajam com informações sobre o token.
 
-## Funcionalidades
+## Funcionalidades em desenvolvimento 
 
+-**Back End**
+-*Integração de Smart Contract e Stripe Payment**
 - **Exploração de Blockchains**: Acesso rápido a exploradores de transações e blocos para várias redes, incluindo Solana, Bitcoin, Binance Smart Chain.
 - **Plataformas DeFi**: Links para as principais plataformas DeFi (Finanças Descentralizadas) para cada blockchain, permitindo que os usuários interajam com o ecossistema.
 - **NFT Ecosystem**: Exploração de plataformas e marketplaces de NFTs para cada blockchain, como Magic Eden para Solana e Binance NFT.
 - **Recursos de Desenvolvimento**: Ferramentas e documentação para desenvolvedores interessados em construir sobre essas blockchains, com suporte para desenvolvimentos em várias linguagens, incluindo Solidity e Rust.
-- **NheengatuX (NGTX)**: Integração com o token **NheengatuX (NGTX)**, permitindo que os usuários visualizem e interajam com o ecossistema relacionado a este token.
+- **NheengatuX (NGTX)**: Integração com o token.
 
 ## Tecnologias Utilizadas
 
@@ -29,7 +33,6 @@ Além disso, o sistema agora suporta o token **NheengatuX (NGTX)**, permitindo q
 ### APIs de Blockchain:
 - APIs públicas para **Solana**, **Binance Smart Chain**, **Bitcoin**, **NheengatuX (NGTX)** e outros, para acessar dados de transações e informações de blocos.
 
-## Funcionalidades do Sistema
 
 ### Solana Network & Resources:
 Explore a blockchain Solana, visualize transações, use ferramentas de desenvolvimento e interaja com o ecossistema de NFTs.
@@ -59,8 +62,3 @@ A estrutura do projeto é organizada em componentes reutilizáveis, com o uso de
 - **Requisições Assíncronas**: Todas as interações com as APIs de blockchain são feitas via chamadas assíncronas para garantir uma experiência fluida.
 - **Design Responsivo**: Utiliza Tailwind CSS para garantir uma experiência otimizada em dispositivos móveis e desktops.
 
-## Atenção: Repositório Privado Recomendado
-
-Este projeto contém códigos sensíveis, como a integração com o **Stripe**, que podem incluir chaves de API e dados privados. **Recomendamos fortemente que o repositório seja mantido privado** para evitar o acesso não autorizado a essas informações.
-
-Caso o repositório esteja público, certifique-se de **remover ou mascarar** essas informações antes de compartilhá-lo, para garantir a segurança e privacidade dos dados envolvidos no sistema de pagamentos.
