@@ -11,6 +11,7 @@ import BitcoinSection from "@/components/BitcoinSection";
 import BinanceSection from "@/components/BinanceSection";
 import NheengatuSection from "@/components/NheengatuSection";
 import NavSection from "@/components/NavSection";
+import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
@@ -48,6 +49,8 @@ const Index = () => {
         <EthereumSection />
 
         <BinanceSection />
+
+        <FooterSection />
       </div>
     </div>
   );
